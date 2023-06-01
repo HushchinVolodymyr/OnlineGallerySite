@@ -1,0 +1,113 @@
+main{
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: 1s;
+}
+
+.picture{
+    background-color: rgba(126, 126, 126, 0.3);
+    width: 100%;
+}
+
+
+.main-img{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s;
+}
+
+.description-container{
+    
+    justify-content: center;
+}
+
+.picture_name{
+    text-align: center;
+    padding: 20px;
+    font-size: 35px;
+    transition: 1s;
+}
+
+.picture-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infromation-about-picture{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+}
+
+.discp p{
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    transition: 1s;
+}
+
+.another-popular-pictures h2{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 35px;
+    transition: 1s;
+}
+
+.line{
+    padding-top: 30px;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s;
+}
+
+.first_picture, .second_picture{
+    max-width: 45%;
+    text-align: center;
+    transition: 1s;
+}
+
+.first_picture, .second_picture{
+    max-width: 45%;
+    text-align: center;
+    transition: 1s;
+}
+
+.description_1, .description_2{
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.first_picture img, .second_picture img{
+    transition: 1s;
+}
+
+.first_picture img:hover, .second_picture img:hover{
+    scale: 1.01;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+.pic{
+    max-width: 100%;
+}
+
+@media (max-width: 500px){
+    .picture_name{
+        font-size: 25px;
+    }
+
+    .main-img{
+        margin: 0;
+        width: 100%;
+    }
+
+    .discp p{
+        font-size: 20px;
+    }
+}

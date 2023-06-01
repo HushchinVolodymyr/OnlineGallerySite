@@ -1,0 +1,68 @@
+{% extends 'base.html'%}
+
+{% block link%}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/addauthor.css') }}">
+{%endblock%}
+
+{% block main %}
+<main>
+    <div class="background">
+        <div class="main-part _container">
+            <form method="post" enctype="multipart/form-data">
+                <div class="add-picture-container">
+                    <h1>Додавання автора</h1>
+                    <input type="text" name="author" id="author" class="author" placeholder="Ім`я автора">
+                    <textarea type="text" name="description" id="description" class="description" placeholder="Опис автора"></textarea>
+                    <div class="drop-area" id="drop-area">
+                        <span id="drop-text" class="drop-text"></span>
+                        <input type="file" name="file-input" id="file-input" class="file-input" onchange="displayFileName()">
+                        <img src="" class="preview" id="preview">
+                        <div id="selected-file"></div>
+                    </div>
+                    
+                    <input type="submit" class="btn btn-success" value="Додати">
+                    <a class="authors" href="/addpicture">Додати картину</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        const dropArea = document.getElementById("drop-area");
+        const dropText = document.getElementById("drop-text");
+        const previewImg = document.getElementById("preview");
+        const fileInput = document.getElementById("file-input");
+
+        fileInput.addEventListener("change", (e) => {
+            const file = e.target.files[0];
+            displayImage(file);
+        });
+
+        function displayImage(file) {
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                previewImg.src = event.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        }
+
+        function displayFileName() {
+            var fileInput = document.getElementById('file-input');
+            var selectedFile = document.getElementById('selected-file');
+            selectedFile.textContent = fileInput.files[0].name;
+        }
+
+        function displayImage(file) {
+         const reader = new FileReader();
+
+        reader.onload = function (event) {
+            previewImg.src = event.target.result;
+            dropArea.classList.add("has-image");
+        };
+
+        reader.readAsDataURL(file);
+        }
+    </script>
+</main>
+{% endblock %}

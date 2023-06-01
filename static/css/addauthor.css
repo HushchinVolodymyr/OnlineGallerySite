@@ -1,0 +1,198 @@
+main{
+    background-color: rgba(75, 75, 75, 0.3);
+    font-family: Kurale;
+
+}
+
+.background{
+    background-color: rgba(126, 126, 126, 0.3);
+    width: 100%;
+
+}
+
+h1{
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 10%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.picture-name, .author, .url{
+    width: 70%;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 0 !important;
+    border-radius: 30px;
+    text-indent: 15px;
+    font-family: Kurale;
+    font-size: 20px;
+    transition: 1s;
+}
+
+.picture-name:hover, .author:hover, .url:hover{
+    scale: 1.1;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.description{
+    max-width: 70%;
+    min-width: 70%;
+    max-height: 300px;
+    width: 70%;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 0 !important;
+    border-radius: 30px;
+    text-indent: 15px;
+    font-family: Kurale;
+    font-size: 20px;
+    transition: 1s;
+    overflow: hidden;
+    padding-top: 5px;
+}
+
+.description::placeholder{
+    transform: translateY(2px);
+}
+
+.description:hover{
+    scale: 1.1;
+    height: 300px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.author, .description, .url{
+    margin-top: 15px;
+}
+
+
+.btn{
+    background-color: rgb(163, 163, 163);
+    margin-top: 30px;
+    width: 25%;
+    height: 45px;
+    border-radius: 30px;
+    font-size: 30px;
+    font-family: Kurale;
+    text-align: center;
+    transition: 1s;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn:hover{
+    background-color: rgb(43, 43, 43);
+    scale: 1.1;
+    color: rgb(197, 197, 197);
+}
+
+.main-part{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-picture-container{
+    background-color: rgba(255, 255, 255, 0.61);
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border-radius: 30px;
+    min-height: 100%;
+    max-height: 300%;
+}
+
+.drop-area{
+    position: relative;
+    flex-grow: 1;
+    width: 70%;
+    height: 45px;
+    background-color: #f2f2f2;
+    border: 2px dashed #cccccc;
+    border-radius: 30px;
+    color: gray;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    transition: 1s;
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
+    padding-left: 22.5%;
+    padding-top: 1%;
+}
+
+.drop-area.has-image {
+    height: 220px;
+  }
+  
+.drop-area:hover {
+    height: 220px;
+}
+
+.preview {
+    height: 150px;
+    top: 0px;   
+}
+
+.authors{
+    text-decoration: none;
+    color: rgb(43, 43, 43);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 7.5%;
+    font-size: 25px;
+}
+
+@media (max-width: 500px){
+    .header__serach{
+        display: none;
+        margin: 0;
+    }
+
+    .main-part{
+        width: 100%;
+        margin: 0;
+    }
+
+    .main-part form{
+        min-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .add-picture-container{
+        margin: 0;
+        border-radius: 0;
+        padding-top: 30%;
+        padding-bottom: 30%;
+    }
+
+    .add-picture-container h1{
+        font-size: 35px;
+    }
+
+    .btn{
+        width: 200px;
+    }
+
+    input{
+        width: 75%;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/images/icons/site-logo.png" rel="icon" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/base.css') }}">
+    {% block link %}{% endblock %}
+    <title>{% block title%}OnlineGallery{% endblock %}</title>
+</head>
+<body>
+    <div class="wrapper">
+            <header class="header">
+                <div class="header__container _container">
+                    <div class="header__logo_container">
+                        <a id="header__logo" href="/" class="header__logo">
+                            OnlineGallery
+                        </a>
+                    </div>
+                    
+                    <div class="search">
+                        <form method="post">
+                            <input type="text" name="query" id="query" class="header__serach" placeholder="Поиск">
+                            <button type="submit"></button>
+                        </form>          
+                    </div>
+
+                    <a href="/addpicture" class="addpicture">{{ admin }}</a>
+                    
+                    <div class="header__user__information">
+                        
+                        <!-- <img class="user__photo" src="static/images/pictures/MyLogo.jpg" alt="user_photo"> -->
+                            <div class="user_name_text">
+                                <a id="username" class="user_name" href="/login">{{username}}</a>
+                            </div>
+                    </div>
+                </div>
+            </header>
+            {% block main%}{% endblock %}
+
+            <footer class="footer"></footer>
+    </div>
+    <script>
+        window.addEventListener('resize', function() {
+            var windowWidth = window.innerWidth;
+            var textElement = document.getElementById('header__logo');
+            var text_aadd = document.getElementById('add_pic')
+
+            if (windowWidth > 500) {
+                textElement.textContent = 'OnlineGallery';
+            } else {
+                textElement.textContent = 'OG';
+            }
+        });
+    </script>
+</body>
+</html>

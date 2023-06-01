@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/author.css') }}">
+{% endblock %}
+
+{% block main %}
+<main>
+    <div class="author-container">
+        <div class="author-center-container _container">
+            <h2 class="author-name">{{author_name}}</h2>
+            
+            <div class="author-information _container">
+                <div class="picture">
+                    <img src="{{ url_for('static', filename=author_path) }}" alt="#" class="author-picture">
+                </div>
+
+                <h2 class="author-text">{{ author_discrpt }}</h2>
+            </div>
+            
+        </div>
+    </div>
+</main>
+{% endblock %}

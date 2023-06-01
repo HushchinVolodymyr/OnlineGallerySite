@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block link%}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/login.css') }}">
+{% endblock %}
+
+{% block main %}
+<main>
+    <div class="background">
+        <div class="registration-wrapper _container">
+            <form method="post" action="/login" enctype="multipart/form-data">
+                <div class="registration-block-container _container">
+                    <h1 class="regist-text">Вхід</h1>
+                    <div class="input-part">
+                        <input type="text" name="login" id="login" class="login-part inpt" placeholder="Логін">
+                        <input type="text" name="password" id="password" class="password-part inpt" placeholder="Пароль">
+                    </div>
+                    <a href="/register" class="go-to-register">Зареєструватися</a>
+                    <input type="submit" class="btn confirm-button" value="Увійти">
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}

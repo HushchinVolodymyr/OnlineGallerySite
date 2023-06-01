@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block link%}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/picture.css') }}">
+{% endblock %}
+
+{% block main %}
+<main>
+    <div class="picture ">
+        <div class="description-container _container">
+            <div class="picture-container _container">
+                <h1 class="picture_name">{{ picture_full_name }}</h1>
+                <img src="{{ url_for('static', filename=picture_path) }}" alt="#" class="main-img">
+            </div>
+        </div>
+
+        <div class="infromation-about-picture _container">
+            <div class="discp">
+                <p>{{ picture_discrpt }}</p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+

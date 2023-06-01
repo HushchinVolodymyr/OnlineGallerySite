@@ -1,0 +1,126 @@
+.background{
+    background-color: rgba(75, 75, 75, 0.3);
+    height: 100%;
+    width: 100%;
+}
+
+.registration-wrapper{
+    max-height: 100%;
+    padding: 60px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.registration-block-container{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    padding-top: 15%;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.regist-text{
+    font-size: 70px;
+    transition: 1s;
+}
+
+.inpt{
+    height: 55px;
+    width: 90%;
+    border-radius: 30px;
+    text-indent: 10px;
+    font-size: 20px;
+    font-family: Kurale;
+    outline: 0 !important;
+    transition: 1s;
+}
+
+.inpt:hover{
+    scale: 1.05;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.login-part{
+    margin-top: 10%;
+}
+
+.password-part{
+    margin-top: 4%;
+}
+
+.inpt::placeholder{
+    font-family: Kurale;
+    font-size: 20px;
+}
+
+.go-to-register{
+    margin-left: 35%;
+    padding-top: 2%;
+    color: black;
+    transition: 1s;
+}
+
+.go-to-register:hover{
+    scale: 1.1;
+}
+
+.confirm-button{
+    background-color: rgba(49, 49, 49, 0.3);
+    margin-top: 8%;
+    margin-bottom: 20%;
+    border-radius: 30px;
+    height: 45px;
+    width: 300px;
+    font-family: Kurale;
+    font-size: 25px;
+    transition: 1s;
+}
+
+.confirm-button:hover{
+    scale: 1.1;
+    background-color: rgb(43, 43, 43);
+    color: white;
+}
+
+@media (max-width: 500px){
+    .regist-text{
+        font-size: 45px;
+    }
+
+    .btn{
+        width: 200px;
+    }
+
+    .inpt{
+        width: 80%;
+        height: 45px;
+    }
+
+    .registration-wrapper{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .registration-block-container{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding-top: 40%;
+        padding-bottom: 40%;
+        border-radius: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .go-to-register{
+        margin: 0;
+        font-size: 20px;
+    }
+}

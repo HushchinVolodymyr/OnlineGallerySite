@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+{% endblock %}
+
+{% block main %}
+    <main class="main">
+        <div class="background_popular_picture_container">
+            <div class="popular_picture_container _container">
+                <div class="img_container">
+                    <a href="{{ url_for('picture', image_id=main_picture_id) }}">
+                        <img src="{{ url_for('static', filename=main_picture_url) }}" alt="#" class="popular__pictures">
+                    </a>
+                </div>
+                <div class="text_container">
+                    <h1 class="picture_name" id="main-picture-dicrt" name="picture">{{ main_picture_name }}</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="pictures_background _container">
+            <div class="pictures">
+                <div class="first-line">
+                    <div class="img-1">
+                        <a href="{{ url_for('picture', image_id=first_picture_id) }}">
+                            <img src="{{ url_for('static', filename=first_picture_url) }}" alt="" class="first-img">
+                        </a>
+                        <div class="dicription">
+                            <h1 name="picture">{{ first_picture_name }}</h1>
+                        </div>
+                    </div>
+
+                    <div class="img-2">
+                        <a href="{{ url_for('picture', image_id=second_picture_id) }}">
+                            <img src="{{ url_for('static', filename=second_picture_url) }}" alt="" class="second-img">
+                        </a>
+                        <div class="dicription">
+                            <h1 name="picture">{{ second_picture_name }}</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="second-line">
+                    <div class="img-3">
+                        <a href="{{ url_for('picture', image_id=third_picture_id) }}">
+                            <img src="{{ url_for('static', filename=third_picture_url) }}" alt="" class="third-img">
+                        </a>
+                        <div class="dicription">
+                            <h1 name="picture">{{ third_picture_name }}</h1>
+                        </div>
+                    </div>
+
+                    <div class="img-4">
+                        <a href="{{ url_for('picture', image_id=fourth_picture_id) }}">
+                            <img src="{{ url_for('static', filename=fourth_picture_url) }}" alt="" class="fourth-img">
+                        </a>
+                        <div class="dicription">
+                            <h1 name="picture">{{ fourth_picture_name }}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="authors-background">
+            <div class="authors _container">
+                <div class="line">
+                    <div class="author-1">
+                        <a href="{{ url_for('author', image_id=first_author_id) }}">
+                            <img src="{{ url_for('static', filename=first_author_url) }}" alt="#" class="author-img-1">
+                        </a>
+                        <div class="descript">
+                            <h1>{{first_author_name}}</h1>
+                        </div>
+                    </div>
+
+                    <div class="author-2">
+                        <a href="{{ url_for('author', image_id=second_author_id) }}">
+                            <img src="{{ url_for('static', filename=second_author_url) }}" alt="#" class="author-img-2">
+                        </a>
+                        <div class="descript">
+                            <h1>{{second_author_name}}</h1>
+                        </div>
+                    </div>
+
+                    <div class="author-3">
+                        <a href="{{ url_for('author', image_id=third_author_id) }}">
+                            <img src="{{ url_for('static', filename=third_author_url) }}" alt="#" class="author-img-3">
+                        </a>
+                        <div class="descript">
+                            <h1>{{third_author_name}}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
